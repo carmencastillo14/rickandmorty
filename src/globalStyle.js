@@ -5,6 +5,7 @@ const GlobalStyle = createGlobalStyle`
         margin: 0;
         padding: 0;
         box-sixing: border-box;
+        bacground-color: #419E99;
     }
 
     img{
@@ -14,7 +15,7 @@ const GlobalStyle = createGlobalStyle`
     ul{
         list-style:none;
     }
-    
+
     li{
         list-style: none;
     }
