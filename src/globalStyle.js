@@ -1,3 +1,5 @@
+/* ESTE ES ELL ESTILO PRINCIPAL */
+
 import { createGlobalStyle } from "styled-components";
 
 const GlobalStyle = createGlobalStyle`
@@ -5,7 +7,7 @@ const GlobalStyle = createGlobalStyle`
         margin: 0;
         padding: 0;
         box-sixing: border-box;
-        bacground-color: #419E99;
+        background-color: #419E99;
     }
 
     img{
