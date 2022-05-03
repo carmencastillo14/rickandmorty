@@ -7,3 +7,6 @@ export function App(){
        {id: 1, task: 'Tarea 1'}
    ]} />
 }
+
+
+export default App;
