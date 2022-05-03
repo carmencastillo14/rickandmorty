@@ -11,9 +11,14 @@ const GlobalStyle = createGlobalStyle`
         max-width: 100%;
     }
 
+    ul{
+        list-style:none;
+    }
+    
     li{
         list-style: none;
     }
+
 
     a{
         text-decoration: none;
