@@ -1,27 +1,24 @@
-import React from "react";
+import React from 'react';
 
-
-//IMPORTACION DEL LOGO
+//Assets
 import logo from './logo.svg';
 
-//EXPORTACIÓN DE LOS COMPONENTES
-import header from './containers/header/header';
-import hero from './containers/hero/hero';
-import headings from './components/headings/headingsH1/headingH1';
-
+//Components
+import Header from './containers/Header/Header';
+import Hero from './containers/Hero/Hero';
+import HeadingH1 from './components/Headings/HeadingH1/HeadingH1';
 
 function App() {
-    return (
-      <>
-        <header />
-        <hero>
-          <headingH1 
-            text="Esto es una prueba"
-          />
-        </hero>
-      </>
-    );
-  }
-  
-  export default App;
+  return (
+    <>
+      <Header />
+      <Hero>
+        <HeadingH1 
+          text="Personajes de Rick And Morty"
+        />
+      </Hero>
+    </>
+  );
+}
 
+export default App;

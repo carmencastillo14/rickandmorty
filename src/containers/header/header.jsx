@@ -1,8 +1,8 @@
 import React from 'react';
-import Logo from '../../components/logo/logo';
-import HeaderContainer from './header-style';
+import Logo from '../../components/Logo/Logo';
+import HeaderContainer from './Header-style';
 
-const header = () => {
+const Header = () => {
     return (
         <HeaderContainer>
             <Logo />
@@ -10,4 +10,4 @@ const header = () => {
     );
 };
 
-export default header;
+export default Header;

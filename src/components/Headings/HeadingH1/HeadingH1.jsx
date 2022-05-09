@@ -1,6 +1,6 @@
 import React from 'react';
 
-import HeadingH1Container from './headingH1-style';
+import HeadingH1Container from './HeadingH1-style';
 
 const HeadingH1 = ({text}) => {
     return (

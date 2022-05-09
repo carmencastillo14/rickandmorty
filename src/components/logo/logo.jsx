@@ -1,20 +1,17 @@
 import React from 'react';
 
-
-//Aqui importamos el logo de la carpeta de imagenes
+//Assets
 import logo from '../../assets/images/logo.png';
 
-//importacion del style components
-import LogoRickandMorty from './logo-style';
+//Styled-components
+import LogoContainer from './Logo-style';
 
 const Logo = () => {
     return (
-        <LogoRickandMorty>
-            <img className="logo-image" src={logo} alt="Logotipo Rick And Morty" />
-        </LogoRickandMorty>
+        <LogoContainer>
+            <img className="logo-image" src={logo} alt="Logotipo pokedex" />
+        </LogoContainer>
     );
 };
-
-
 
 export default Logo;
