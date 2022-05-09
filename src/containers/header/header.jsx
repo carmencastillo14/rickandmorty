@@ -5,7 +5,7 @@ import HeaderContainer from './Header-style';
 const Header = () => {
     return (
         <HeaderContainer>
-            <Logo />
+            <Logo className = "logorickandmorty"/>
         </HeaderContainer>
     );
 };
