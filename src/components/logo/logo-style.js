@@ -8,7 +8,7 @@ const LogoContainer = styled.div`
         justify-content: center;
         align-items: center;
         text-align: center;
-        max-width: 100%;
+
     }
 `;
 

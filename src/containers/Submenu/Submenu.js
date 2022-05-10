@@ -6,10 +6,10 @@ const NavContainer = styled.section`
     display: flex;
     font-size: 18px; 
     justify-content: center;
+    align-items: center;
     text-align: center;
     width: 100%;
     height: 300px;
-    color: blue;
 `;
 
 export default NavContainer;
