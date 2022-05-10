@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-const NavContainer = styled.section`
+const SubmenuContainer = styled.section`
     background-color: #419E99;
     color: white;
     display: flex;
@@ -12,4 +12,4 @@ const NavContainer = styled.section`
     height: 300px;
 `;
 
-export default NavContainer;
+export default SubmenuContainer;
