@@ -4,7 +4,7 @@ import axios from 'axios';
 
 
 
-//Components
+//COMPONENTES Y CONTENEDORES
 import Header from '../../containers/Header/Header';
 import Hero from '../../containers/Hero/Hero';
 import HeadingH1 from '../../components/Text/Headings/HeadingH1/HeadingH1';
