@@ -1,7 +1,7 @@
 import React from "react";
 import RickandMortyCardContainer from "./RickandMorty-style";
 
-const PokemonCard = ({name, handleClick}) => {
+const RickCard = ({name, handleClick}) => {
     return (
         <RickandMortyCardContainer>
             <h3>{name}</h3>
@@ -10,4 +10,4 @@ const PokemonCard = ({name, handleClick}) => {
     );
 };
 
-export default PokemonCard;
+export default RickCard;

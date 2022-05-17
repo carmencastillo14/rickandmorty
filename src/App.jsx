@@ -6,7 +6,7 @@ import {
   Route,
 } from "react-router-dom";
 import Personajes from './pages/Personajes';
-import PokemonDetail from './pages/Personajes/name';
+import RickDetail from './pages/Personajes/name';
 import Contacto from './pages/Contacto';
 
 
@@ -22,7 +22,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/Personajes" element={<Personajes />} />
-          <Route path="/Personajes/:name" element={<PokemonDetail />} />
+          <Route path="/Personajes/:name" element={<RickDetail />} />
           <Route path="/contactos" element={<Contacto />} />
         </Routes>
       </BrowserRouter>

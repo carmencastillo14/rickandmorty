@@ -3,38 +3,38 @@ import { getRickandMortyRequest } from '../../lib/rick-api/request/get-rickandmo
 import { getRickRequest } from '../../lib/rick-api/request/get-rick-request';
 
 
-export const usePokemons = () => {
+export const useRick = () => {
     const [loading, setLoading] = useState(true);
-    const [pokemonListError, setPokemonListError] =useState("");
+    const [rickListError, setRickListError] =useState("");
 
-    const getPokemons = async () => {
+    const getRick = async () => {
         try{
-            const pokemonResponse = await getRickandMortyRequest(); 
+            const rickResponse = await getRickandMortyRequest(); 
             setLoading(false);
-            return pokemonResponse; 
+            return rickResponse; 
         }catch(error){
-            setPokemonListError(error);
+            setRickListError(error);
             setLoading(false);
       
         }
     };
 
-    const getPokemon = async (url) => {
+    const getRickandComponents = async (url) => {
         try{
-            const pokemonResponse = await getRickRequest(url); 
+            const rickResponse = await getRickRequest(url); 
             setLoading(false);
-            return pokemonResponse; 
+            return rickResponse; 
         }catch(error){
-            setPokemonListError(error);
+            setRickListError(error);
             setLoading(false);
       
         }
     }
 
     return {
-        getPokemons,
-        getPokemon,
+        getRick,
+        getRickandComponents,
         loading,
-        pokemonListError
+        rickListError
     }
 }
