@@ -3,10 +3,10 @@ import RickandMortyCardContainer from "./RickandMorty-style";
 
 const PokemonCard = ({name, handleClick}) => {
     return (
-        <PokemonCardContainer>
+        <RickandMortyCardContainer>
             <h3>{name}</h3>
             <span onClick={() => handleClick()} >Ver habilidades</span>
-        </PokemonCardContainer>
+        </RickandMortyCardContainer>
     );
 };
 

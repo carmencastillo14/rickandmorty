@@ -11,8 +11,8 @@ const PokemonDetail = () => {
 
     const getPokemonInfo = async (url) => {
         try{
-            const RickRequest = await pokemonsService.getPokemon(url);
-            const Rick = await RickRequest.data;
+            const getRickRequest = await pokemonsService.getPokemon(url);
+            const Rick = await getRickRequest.data;
             setselectRick(Rick);
         }catch(error){
             setError("Ooops, no es posible áun cargar esta página")

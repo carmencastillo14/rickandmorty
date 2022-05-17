@@ -67,17 +67,17 @@ function Home() {
   
     
     return (
-      <HomeContainer theme={themeValue.theme}>
+      <HomeContainer >
         <Header 
-          handleTheme={() => themeValue.handleTheme()}
+            
         />
         <Hero>
           <HeadingH1 
             text="Personajes de Rick And Morty"
           />
           <Paragraph 
-            text="Este es mi primer proyecto molon en React JS"
-            color="#ffffff"
+            text="Encuentra a tus personajes favoritos de Rick And Morty en esta API."
+
           />
         </Hero>
         <Section>

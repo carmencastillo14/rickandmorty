@@ -23,7 +23,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/Personajes" element={<Personajes />} />
           <Route path="/Personajes/:name" element={<PokemonDetail />} />
-          <Route path="/contactos2" element={<Contacto />} />
+          <Route path="/contactos" element={<Contacto />} />
         </Routes>
       </BrowserRouter>
     </ThemeContext.Provider>
