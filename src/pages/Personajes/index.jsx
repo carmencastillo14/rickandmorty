@@ -2,7 +2,8 @@ import React, { useState, useEffect, useRef, useContext } from 'react';
 
 
 import axios from 'axios';
-
+//Styled-component
+import HomeContainer from './home-style';
 
 
 
@@ -10,58 +11,59 @@ import axios from 'axios';
 import Header from '../../containers/Header/Header';
 import Hero from '../../containers/Hero/Hero';
 import Submenu from '../../containers/Submenu/Submenu'
-import HeadingH1 from '../../components/Text/Headings/HeadingH1/HeadingH1';
-import Paragraph from '../../components/Text/Paragraph/Paragraph';
+import HeadingH1 from '../../components/Headings/HeadingH1/HeadingH1';
+import Paragraph from '../../components/Paragraph/Paragraph';
 import Section from '../../containers/Section/Section';
-import HeadingH2 from '../../components/Text/Headings/HeadingH2/HeadingH2';
-import PokemonList from '../../containers/PokemonList/PokemonList';
+import HeadingH2 from '../../components/Headings/HeadingH2/HeadingH2';
+import RickandMortyList from '../../containers/RickandMortyList/RickandMortyList';
 import RickandMorty from '../../components/RickandMortyCard/RickandMorty';
-import MainModal from '../../containers/MainModal/MainModal';
-
+import MainModal from '../../containers/MainModal/MainModal-style';
 
 import { getRickandMortyRequest } from '../../lib/rick-api/request/get-rickandmorty-request';
 
-
+import { useRick  } from '../../containers/services/rick-servicies';
 
 //Hooks
 import { useModal } from '../../hooks/use-modal';
 
 
-function Home() {
+const  Home = () => {
 
     const { handleModal, modalOpened } = useModal();
-    const pokemonService = usePokemons();
+    const RickService = useRick();
   
-    const [pokemonList, setPokemonList] = useState([]);
-    const [searchedPokemon, setSearchedPokemon] = useState([]);
+    const [rickandMortyList, setRickandMortyList] = useState([]);
+    const [searchedRick, setSearchedRick] = useState([]);
     
-    const [selectedPokemon, setSelectedPokemon] = useState({});
+    const [selectedRick, setSelectedRick] = useState({});
   
     const searchBar = useRef(null);
   
-    const themeValue = useContext(ThemeContext);
+
   
     useEffect(() => {
-      const getPokemonList = async () => {
-        const pokemons = await pokemonService.getPokemons();
-        const { results } = await pokemons.data;
-        setPokemonList(results);
-        setSearchedPokemon(results);
+      const getRickandMortyList = async () => {
+        const Ricks = await RickService.getRick();
+        const { results } = await Ricks.data;
+        console.log(results)
+        setRickandMortyList(results);
+        setSearchedRick(results);
       }
-      getPokemonList();
+      getRickandMortyList();
     }, []);
+
   
-    const handlePokemon = async (url) => {
-      const pokemon = await pokemonService.getPokemon(url);
-      const pokemonInfo = await pokemon.data;
-      setSelectedPokemon(pokemonInfo);
+    const handleRick = async (url) => {
+      const Rick = await RickService.getRick(url);
+      const RickInfo = await Rick.data;
+      setSelectedRick(RickInfo);
       handleModal(true)
     }
   
     const handleSearch = () => {
       const searchedValue = searchBar.current.value.toLowerCase();
-      const filteredPokemon = pokemonList.filter(pokemon => pokemon.name.toLowerCase().includes(searchedValue));
-      setSearchedPokemon(filteredPokemon);
+      const filteredRick = RickandMortyList.filter(Rick => Rick.name.toLowerCase().includes(searchedValue));
+      setSearchedRick(filteredRick);
     }
   
   
@@ -70,6 +72,8 @@ function Home() {
       <HomeContainer >
         <Header 
             
+        />
+        <Submenu
         />
         <Hero>
           <HeadingH1 
@@ -81,35 +85,35 @@ function Home() {
           />
         </Hero>
         <Section>
-          <HeadingH2 text="Pokemons destacados" />
+          <HeadingH2 text="Personajes de Rick and Morty destacados" />
           {
-            pokemonService.loading && <span>Estoy descargando la lista</span>
+            RickService.loading && <span>Estoy descargando la lista</span>
           }
           {
-            pokemonService.pokemonListError !== "" && <span>{pokemonService.pokemonListError}</span>
+            RickService.RickandMortyListError !== "" && <span>{RickService.RickandMortyListError}</span>
           }
           <div className="buscador">
             <input 
               ref={searchBar} 
               type="text" 
-              placeholder="Buscar pokemon"
+              placeholder="Buscar Personajes"
               onChange={(e) => handleSearch(e)}
               />
           </div>
-          <PokemonList>
+          <RickandMortyList>
             {
-              searchedPokemon.map((pokemon, index) => {
+              rickandMortyList.length > 0  && rickandMortyList.map((Rick, index) => {
                 return (
                   <li key={index}>
                     <RickandMorty 
-                      name={pokemon.name}
-                      handleClick={() => handlePokemon(pokemon.url)}
+                      name={Rick.name}
+                      handleClick={() => handleRick(Rick.url)}
                       />
                   </li>
                 )
               })
             }
-          </PokemonList>
+          </RickandMortyList>
         </Section>
         {
           modalOpened && (

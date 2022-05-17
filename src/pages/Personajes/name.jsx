@@ -1,17 +1,17 @@
 import React, { useState, useEffect } from 'react';
 import { useParams } from "react-router-dom";
-import HeadingH1 from '../../components/Text/Headings/HeadingH1/HeadingH1';
-import { useRicks } from "../../services/rick-services";
+import HeadingH1 from '../../components/Headings/HeadingH1/HeadingH1';
+import { useRick } from '../../containers/services/rick-servicies';
 
 const RickDetail = () => {
     const params = useParams();
-    const RickService = useRicks();
+    const RickService = useRick();
     const [selectRick, setselectRick] = useState({});
     const [error, setError] = useState("");
 
     const getRickInfo = async (url) => {
         try{
-            const getRickRequest = await RickService.getPokemon(url);
+            const getRickRequest = await RickService.getRick(url);
             const Rick = await getRickRequest.data;
             setselectRick(Rick);
         }catch(error){

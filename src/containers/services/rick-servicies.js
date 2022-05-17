@@ -1,5 +1,5 @@
 import { useState } from 'react'; 
-import { getRickandMortyRequest } from '../../lib/rick-api/request/get-rickandmortyapi-request';
+import { getRickandMortyRequest } from '../../lib/rick-api/request/get-rickandmorty-request';
 import { getRickRequest } from '../../lib/rick-api/request/get-rick-request';
 
 
@@ -9,6 +9,7 @@ export const useRick = () => {
 
     const getRick = async () => {
         try{
+            
             const rickResponse = await getRickandMortyRequest(); 
             setLoading(false);
             return rickResponse; 

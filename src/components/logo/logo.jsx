@@ -4,7 +4,7 @@ import React from 'react';
 import logo from '../../assets/images/logo.png';
 
 //Styled-components
-import LogoContainer from './Logo-style';
+import LogoContainer from './logo-style';
 
 const Logo = () => {
     return (
