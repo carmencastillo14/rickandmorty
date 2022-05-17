@@ -14,7 +14,7 @@ import Submenu from '../../containers/Submenu/Submenu'
 import HeadingH1 from '../../components/Headings/HeadingH1/HeadingH1';
 import Paragraph from '../../components/Paragraph/Paragraph';
 import Section from '../../containers/Section/Section';
-import HeadingH2 from '../../components/Headings/HeadingH2/HeadingH2';
+import HeadingH2 from '../../components/Headings/HeadingH2/HeadingH2/HeadingH2';
 import RickandMortyList from '../../containers/RickandMortyList/RickandMortyList';
 import RickandMorty from '../../components/RickandMortyCard/RickandMorty';
 import MainModal from '../../containers/MainModal/MainModal-style';
@@ -78,14 +78,18 @@ const  Home = () => {
         <Hero>
           <HeadingH1 
             text="Personajes de Rick And Morty"
+            />
+          <Paragraph 
+          text="Encuentra a tus personajes favoritos de Rick And Morty en esta API."
+
           />
+          <HeadingH2 text="Personajes de Rick and Morty destacados" />
           <Paragraph 
             text="Encuentra a tus personajes favoritos de Rick And Morty en esta API."
-
           />
         </Hero>
         <Section>
-          <HeadingH2 text="Personajes de Rick and Morty destacados" />
+
           {
             RickService.loading && <span>Estoy descargando la lista</span>
           }

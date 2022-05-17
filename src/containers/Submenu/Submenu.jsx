@@ -1,11 +1,11 @@
 import React,{ useContext} from 'react';
 
-import Submenu from './Submenu-style';
+import SubmenuContainer from './Submenu-style';
 
 const Submenu = () => {
-    const themeValue = useContext(ThemeContext);
+
     return (
-        <HeaderContainer theme={themeValue.theme}>
+        <HeaderContainer>
             <nav>
                 <Link to="/">Home</Link>
                 <Link to="/contacto">Contacto</Link>
