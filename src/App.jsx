@@ -1,25 +1,32 @@
 import React from 'react';
-import "./App.css";
+import GlobalStyle from './globalStyle';
+import {
+  BrowserRouter,
+  Routes,
+  Route,
+} from "react-router-dom";
+import Personajes from './pages/Personajes';
+import PokemonDetail from './pages/Personajes/name';
+import Contacto from './pages/Contacto';
 
 
-//Assets
-import logo from './logo.svg';
-
-//Components
-import Header from './containers/Header/Header';
-import Hero from './containers/Hero/Hero';
-import HeadingH1 from './components/Headings/HeadingH1/HeadingH1';
 
 function App() {
+
+  const theme = useTheme(); 
+
   return (
-    <>
-      <Header />
-      <Hero>
-        <HeadingH1 
-          text="Personajes de Rick And Morty"
-        />
-      </Hero>
-    </>
+    <ThemeContext.Provider value={theme}>
+      <BrowserRouter>
+        <GlobalStyle />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/Personajes" element={<Personajes />} />
+          <Route path="/Personajes/:name" element={<PokemonDetail />} />
+          <Route path="/contactos2" element={<Contacto />} />
+        </Routes>
+      </BrowserRouter>
+    </ThemeContext.Provider>
   );
 }
 

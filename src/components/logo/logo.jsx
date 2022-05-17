@@ -9,7 +9,7 @@ import LogoContainer from './Logo-style';
 const Logo = () => {
     return (
         <LogoContainer>
-            <img className="logo-image" src={logo} alt="Logotipo pokedex" />
+            <img className="logo-image" src={logo} alt="Logotipo de Rick and Morty" />
         </LogoContainer>
     );
 };

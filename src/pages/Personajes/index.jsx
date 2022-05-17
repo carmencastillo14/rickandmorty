@@ -1,4 +1,6 @@
 import React, { useState, useEffect, useRef, useContext } from 'react';
+
+
 import axios from 'axios';
 
 
@@ -7,16 +9,17 @@ import axios from 'axios';
 //COMPONENTES Y CONTENEDORES
 import Header from '../../containers/Header/Header';
 import Hero from '../../containers/Hero/Hero';
+import Submenu from '../../containers/Submenu/Submenu'
 import HeadingH1 from '../../components/Text/Headings/HeadingH1/HeadingH1';
 import Paragraph from '../../components/Text/Paragraph/Paragraph';
 import Section from '../../containers/Section/Section';
 import HeadingH2 from '../../components/Text/Headings/HeadingH2/HeadingH2';
 import PokemonList from '../../containers/PokemonList/PokemonList';
-import PokemonCard from '../../components/PokemonCard/PokemonCard';
+import RickandMorty from '../../components/RickandMortyCard/RickandMorty';
 import MainModal from '../../containers/MainModal/MainModal';
 
 
-import { getPokemonsRequest } from '../../lib/rick-api/request/get-RickandMorty-request';
+import { getRickandMortyRequest } from '../../lib/rick-api/request/get-rickandmorty-request';
 
 
 
@@ -70,9 +73,7 @@ function Home() {
         />
         <Hero>
           <HeadingH1 
-            text="Mi primer pokedex"
-            color="#ffffff"
-            colorHover="#000000"
+            text="Personajes de Rick And Morty"
           />
           <Paragraph 
             text="Este es mi primer proyecto molon en React JS"
@@ -100,7 +101,7 @@ function Home() {
               searchedPokemon.map((pokemon, index) => {
                 return (
                   <li key={index}>
-                    <PokemonCard 
+                    <RickandMorty 
                       name={pokemon.name}
                       handleClick={() => handlePokemon(pokemon.url)}
                       />
