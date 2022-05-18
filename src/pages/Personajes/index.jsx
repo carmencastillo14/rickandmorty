@@ -8,8 +8,8 @@ import HomeContainer from './home-style';
 
 
 //COMPONENTES Y CONTENEDORES
-import Header from '../../containers/Header/Header';
-import Hero from '../../containers/Hero/Hero';
+import Header from '../../containers/header/header';
+import Hero from '../../containers/hero/hero';
 import Submenu from '../../containers/Submenu/Submenu'
 import HeadingH1 from '../../components/Headings/HeadingH1/HeadingH1';
 import Paragraph from '../../components/Paragraph/Paragraph';
