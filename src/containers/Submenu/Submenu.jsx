@@ -1,17 +1,19 @@
 import React,{ useContext} from 'react';
+import { Link } from "react-router-dom";
+import SubmenuContainer from './Submenu';
 
-import SubmenuContainer from './Submenu-style';
-
-const Submenu = () => {
-
+const Submenu = ({children}) => {
     return (
-        <HeaderContainer>
+        <SubmenuContainer>
+            {children}
             <nav>
                 <Link to="/">Home</Link>
                 <Link to="/contacto">Contacto</Link>
             </nav>
-        </HeaderContainer>
+        </SubmenuContainer>
     );
 };
+
+
 
 export default Submenu;

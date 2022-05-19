@@ -5,7 +5,7 @@ import axios from 'axios';
 //Styled-component
 import HomeContainer from './home-style';
 
-
+import { Link } from "react-router-dom";
 
 //COMPONENTES Y CONTENEDORES
 import Header from '../../containers/header/header';
@@ -25,6 +25,7 @@ import { useRick  } from '../../containers/services/rick-servicies';
 
 //Hooks
 import { useModal } from '../../hooks/use-modal';
+import SubmenuContainer from '../../containers/Submenu/Submenu';
 
 
 const  Home = () => {
@@ -74,19 +75,14 @@ const  Home = () => {
             
         />
         <Submenu
+        
         />
+        <SubmenuContainer />
         <Hero>
           <HeadingH1 
             text="Personajes de Rick And Morty"
             />
-          <Paragraph 
-          text="Encuentra a tus personajes favoritos de Rick And Morty en esta API."
-
-          />
-          <HeadingH2 text="Personajes de Rick and Morty destacados" />
-          <Paragraph 
-            text="Encuentra a tus personajes favoritos de Rick And Morty en esta API."
-          />
+          <HeadingH2 text="Encuentra a tus personajes favoritos de Rick And Morty en esta API." />
         </Hero>
         <Section>
 
@@ -100,7 +96,7 @@ const  Home = () => {
             <input 
               ref={searchBar} 
               type="text" 
-              placeholder="Buscar Personajes"
+              placeholder="Busca ya a tu personaje favorito"
               onChange={(e) => handleSearch(e)}
               />
           </div>

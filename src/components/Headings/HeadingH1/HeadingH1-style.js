@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 const HeadingH1Container = styled.h1`
-
+    margin-top: 40px;
     font-weight: bold;
     font-size: 60px;
     line-height: 70px;
