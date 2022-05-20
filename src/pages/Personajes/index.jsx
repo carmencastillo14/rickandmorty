@@ -18,6 +18,8 @@ import HeadingH2 from '../../components/Headings/HeadingH2/HeadingH2/HeadingH2';
 import RickandMortyList from '../../containers/RickandMortyList/RickandMortyList';
 import RickandMorty from '../../components/RickandMortyCard/RickandMorty';
 import MainModal from '../../containers/MainModal/MainModal-style';
+import PageNavegation from "../../containers/PageNavegation/PageNavegation";
+
 
 import { getRickandMortyRequest } from '../../lib/rick-api/request/get-rickandmorty-request';
 
@@ -54,6 +56,13 @@ const  Home = () => {
     }, []);
 
   
+    const handleCharacterPagination = async (url) =>{
+      const character = await RickService.getCharacter(url);
+      const result = await character.data;
+      setCharacterList(result);
+    };
+
+
     const handleRick = async (url) => {
       const Rick = await RickService.getRick(url);
       const RickInfo = await Rick.data;
@@ -114,6 +123,14 @@ const  Home = () => {
               })
             }
           </RickandMortyList>
+          // LOS BOTONES DE PREV Y NEXT 
+          {
+            RickandMortyList.info && <PageNavegation
+              prevUrl={RickandMortyList.info.prev}
+              nextUrl={RickandMortyList.info.next}
+              onClick={(url)=>handleCharacterPagination(url)}
+            />
+          }
         </Section>
         {
           modalOpened && (

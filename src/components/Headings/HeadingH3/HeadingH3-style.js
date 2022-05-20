@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 
 const HeadingH3Container = styled.h3`
-    font-size: 25px;
+    font-size: 20px;
     line-height: 60px;
     color: red;
 `;
