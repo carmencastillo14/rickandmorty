@@ -50,7 +50,7 @@ const  Home = () => {
         const { results } = await Ricks.data;
         console.log(results)
         setRickandMortyList(results);
-        setSearchedRick(results);
+
       }
       getRickandMortyList();
     }, []);
@@ -61,6 +61,9 @@ const  Home = () => {
       const result = await character.data;
       setCharacterList(result);
     };
+
+
+
 
 
     const handleRick = async (url) => {
@@ -105,7 +108,7 @@ const  Home = () => {
             <input 
               ref={searchBar} 
               type="text" 
-              placeholder="Busca ya a tu personaje favorito"
+              placeholder="Busca a tu personaje favorito"
               onChange={(e) => handleSearch(e)}
               />
           </div>
@@ -134,7 +137,9 @@ const  Home = () => {
         </Section>
         {
           modalOpened && (
-            <MainModal handleClick={() => handleModal(false)}></MainModal> 
+            <MainModal handleClick={() => handleModal(false)}>
+              img={selectedCharacter.image}
+            </MainModal> 
           )
         }
         
