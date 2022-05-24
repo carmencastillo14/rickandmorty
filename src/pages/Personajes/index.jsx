@@ -27,7 +27,7 @@ import { useRick  } from '../../containers/services/rick-servicies';
 
 //Hooks
 import { useModal } from '../../hooks/use-modal';
-import SubmenuContainer from '../../containers/Submenu/Submenu';
+
 
 
 const  Home = () => {
@@ -37,6 +37,9 @@ const  Home = () => {
   
     const [rickandMortyList, setRickandMortyList] = useState([]);
     const [searchedRick, setSearchedRick] = useState([]);
+    const [characterList, setCharacterList] = useState([]);
+    const [selectedCharacter, setSelectedCharacter] = useState([]);
+    const [info, setInfo] = useState({})
     
     const [selectedRick, setSelectedRick] = useState({});
   
@@ -47,9 +50,9 @@ const  Home = () => {
     useEffect(() => {
       const getRickandMortyList = async () => {
         const Ricks = await RickService.getRick();
-        const { results } = await Ricks.data;
-        console.log(results)
+        const { results, info } = await Ricks.data;
         setRickandMortyList(results);
+        setInfo(info)
 
       }
       getRickandMortyList();
@@ -57,9 +60,11 @@ const  Home = () => {
 
   
     const handleCharacterPagination = async (url) =>{
-      const character = await RickService.getCharacter(url);
-      const result = await character.data;
-      setCharacterList(result);
+      
+      const character = await RickService.getRickandComponents(url);
+      const { results, info } = await character.data;
+        setRickandMortyList(results);
+        setInfo(info)
     };
 
 
@@ -86,10 +91,8 @@ const  Home = () => {
         <Header 
             
         />
-        <Submenu
+        <Submenu />
         
-        />
-        <SubmenuContainer />
         <Hero>
           <HeadingH1 
             text="Personajes de Rick And Morty"
@@ -119,6 +122,7 @@ const  Home = () => {
                   <li key={index}>
                     <RickandMorty 
                       name={Rick.name}
+                      image={Rick.image}
                       handleClick={() => handleRick(Rick.url)}
                       />
                   </li>
@@ -126,11 +130,11 @@ const  Home = () => {
               })
             }
           </RickandMortyList>
-          // LOS BOTONES DE PREV Y NEXT 
+           {/* LOS BOTONES DE PREV Y NEXT  */}
           {
-            RickandMortyList.info && <PageNavegation
-              prevUrl={RickandMortyList.info.prev}
-              nextUrl={RickandMortyList.info.next}
+          info.count && <PageNavegation
+              prevUrl={info.prev}
+              nextUrl={info.next}
               onClick={(url)=>handleCharacterPagination(url)}
             />
           }

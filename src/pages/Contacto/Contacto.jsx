@@ -1,43 +1,53 @@
-import React, {useState} from 'react';
+// import React, { useState } from 'react';
 
-const Contacto = () => {
+// //Styled-components
+// import ContactContainer from './Contacto-style-style';
 
-    const [formMessage, setFormMessage]  = useState({});
 
-    const handleForm = (e) => {
-        const updateMessage = {
-            ...formMessage,
-            [e.target.name]: e.target.value
-        }
-        setFormMessage(updateMessage);
-    }
 
-    const sendForm = () => {
-        console.log(formMessage)
-    }
+// const Contact = () => {
+//     const [formValues, setFormValues] = useState({});
 
-    return (
-        <div>
-            <h1>Página de contacto</h1>
-            <form >
-                <input 
-                    type="text" 
-                    name="nombre" 
-                    placeholder="Nombre y Apellidos"
-                    onBlur={(e) => handleForm(e)}
-                    /><br />
-                    
-                <input 
-                    type="email"
-                    name="email" 
-                    placeholder="Correo"
-                    onBlur={(e) => handleForm(e)}
-                    /><br />
-                <textarea name="mensaje" cols="30" rows="10" onBlur={(e) => handleForm(e)}></textarea><br />
-                <span onClick={() => sendForm() } >Enviar</span>
-            </form>
-        </div>
-    )
-};
+//     const handleFormValue = (e) => {
 
-export default Contacto;
+//     }
+
+//     return (
+//         <ContactContainer>
+//             <Header />
+//             <HeroSection>
+//                 <div className="hero-wrapper">
+//                     <img src={HeroImage} alt="" />
+//                     <h1>Bienvenid@ al Nivel 3</h1>
+//                     <p>Para superar el nivel tendrás que manejar el formulario para que si alguien quiera desafiarnos pueda contactarnos</p>
+//                 </div>
+//             </HeroSection>
+//             <Section>
+//                 <form action="" className='form-wrapper'>
+//                     <input 
+//                         type="text" 
+//                         name="nombre" 
+//                         placeholder='Nombre y apellidos'
+//                         onBlur={(e) => handleFormValue(e) }
+//                     />
+//                     <input 
+//                         type="email" 
+//                         name="email" 
+//                         placeholder='Email'
+//                         onBlur={(e) => handleFormValue(e) }
+//                         />
+//                     <textarea 
+//                         name="mensaje" 
+//                         cols="30" rows="10" 
+//                         placeholder='Mensaje'
+//                         onBlur={(e) => handleFormValue(e) }
+//                         ></textarea>
+//                     <span>Enviar</span>
+//                 </form>
+//             </Section>
+//         </ContactContainer>
+//     );
+// };
+
+// export default Contact;
+

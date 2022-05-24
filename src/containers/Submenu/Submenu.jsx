@@ -1,13 +1,13 @@
 import React,{ useContext} from 'react';
 import { Link } from "react-router-dom";
-import SubmenuContainer from './Submenu';
+import SubmenuContainer from './Submenu-style';
 
-const Submenu = ({children}) => {
+const Submenu = () => {
     return (
         <SubmenuContainer>
-            {children}
+            
             <nav>
-                <Link to="/">Home</Link>
+                <Link to="/">Personajes</Link>
                 <Link to="/contacto">Contacto</Link>
             </nav>
         </SubmenuContainer>

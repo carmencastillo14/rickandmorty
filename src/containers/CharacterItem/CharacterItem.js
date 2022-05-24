@@ -25,11 +25,8 @@ const CharacterItemContainer = styled.li`
         
         strong{
             padding:5px 5px 5px 10px;    
-            
             overflow: hidden;
             white-space: nowrap;
-            text-overflow: ellipsis;
-            
             font-size: 18px;    
             font-weight: bolder;   
             letter-spacing: 1px;
@@ -39,19 +36,14 @@ const CharacterItemContainer = styled.li`
             
             &:hover{            
                 position: relative;
-
-                text-transform: capitalize;
-                background-color:transparent;
+                background-color:blue;
             }
         }
         
     }
 
     div.card{  
-        background-image: url(${fichaPersonajes});
-        background-repeat: no-repeat;
-        background-clip: border-box;
-        background-size: 300px 250px;
+        background-color: blue; 
         text-align: center;
         display: flex;
         justify-content:space-around;
@@ -66,10 +58,6 @@ const CharacterItemContainer = styled.li`
         div.verticalText{
             display: flex;
             flex-direction: column;
-            writing-mode: vertical-lr;
-            text-orientation: upright;
-            font-family: AlienScript-Regular;
-            text-transform: uppercase;
             color:#efefef;
             font-weight: bold;
             font-size:0.8rem;
@@ -87,9 +75,7 @@ const CharacterItemContainer = styled.li`
                 margin: 0;
                 padding: 0;
                 line-height: 22px;
-                &:hover{
-                    font-family:Narcotix;
-                }
+
             }
         }
 
@@ -98,16 +84,12 @@ const CharacterItemContainer = styled.li`
             height: fit-content;
             
             div.image{         
-                -webkit-clip-path: polygon(10% 0, 90% 0, 100% 10%, 100% 90%, 90% 100%, 10% 100%, 0 90%, 0 10%);
-                clip-path: polygon(10% 0, 90% 0, 100% 10%, 100% 90%, 90% 100%, 10% 100%, 0 90%, 0 10%);
                 width: 100px;
                 height: 120px;
                 margin-top: 10px;
                 background-color: #00B1B8;
                 border: solid 5px #00B1B8;
                 img{
-                    -webkit-clip-path: polygon(10% 0, 90% 0, 100% 10%, 100% 90%, 90% 100%, 10% 100%, 0 90%, 0 10%);
-                    clip-path: polygon(10% 0, 90% 0, 100% 10%, 100% 90%, 90% 100%, 10% 100%, 0 90%, 0 10%);
                     width: 100px;
                     height: 120px;
                     overflow:hidden;
@@ -120,53 +102,7 @@ const CharacterItemContainer = styled.li`
                 align-items: center;
                 width: 100%;
                 height: 35px;
-                padding-top: 5px;
-                svg{
-                    path{
-                        stroke-dasharray: 1;
-                        stroke-dashoffset: 1;
-                        animation: ${fb1} 16s linear infinite alternate;
-                    }
-                }
-                div:nth-child(2){
-                    position:absolute;
-                    left: 30px;
-                    top: 8px;
-                    background-color:#A6F1FE;
-                    border-radius:50%;
-                    animation: ${fb2} 3s linear 2s infinite alternate;
-                }
-                div:nth-child(3){
-                    position:absolute;
-                    left: 10px;
-                    width: 10px;
-                    height: 10px;
-                    background-color:#A6F1FE;
-                    border-radius:50%;
-                    animation: ${fb3} 1.5s linear 1s infinite alternate;
-                }
-                div:nth-child(4){
-                    position:absolute;
-                    right:5px;
-                    width: 5px;
-                    height: 5px;
-                    border: solid 3px #A6F1FE;
-                    border-radius:50%;
-                    background-color:transparent;
-                    animation: ${fb4} 1.5s linear 4s infinite alternate;
-                }
-                div:nth-child(5){
-                    position:absolute;
-                    bottom: 5px;
-                    right: 40px;                       
-                    width: 5px;
-                    height: 5px;   
-                    border-bottom: solid 2px rgba(166,241,254,0.5);  
-                    border-left: solid 2px #A6F1FE;
-                    border-radius:50%;
-                    animation: ${fb5} 3s linear infinite;
-                }
-                
+                padding-top: 5px;                
             }
         }
         

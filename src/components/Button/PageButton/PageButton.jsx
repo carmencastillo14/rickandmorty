@@ -1,5 +1,5 @@
 import React from "react";
-import PageButtonContainer from "./PageButton";
+import PageButtonContainer from "./PageButton-style";
 
 const PageButton = ({children}) =>{
     return(

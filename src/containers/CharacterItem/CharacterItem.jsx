@@ -19,7 +19,7 @@ const CharacterItem = ({ name, sheet, image, vertical, handleClick, children }) 
                 </div>
                 <div className="imageBox">
                     <div className="image" >
-                        <img src={ image } alt={ name } />
+                        <img src={ image } alt="" />
                     </div>
                     <div className="falseButtons">
                         <div></div>

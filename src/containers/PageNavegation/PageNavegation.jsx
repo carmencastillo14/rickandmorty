@@ -6,11 +6,11 @@ const PageNavegation = ({ prevUrl, nextUrl, onClick } ) =>{
     return(
         <PageNavegationContainer>
             {
-                prevUrl !== null && <PageButton onClick={()=>onClick(prevUrl)}>Siguiente</PageButton>
+                prevUrl !== null && <PageButton ><span onClick={()=>onClick(prevUrl)}>Anterior</span></PageButton>
                 
             }
             {
-                nextUrl !== null && <PageButton onClick={()=>onClick(nextUrl)}>Anterior</PageButton>
+                nextUrl !== null && <PageButton><span  onClick={()=>onClick(nextUrl)}>Siguiente</span></PageButton>
             } 
         </PageNavegationContainer>
     );
