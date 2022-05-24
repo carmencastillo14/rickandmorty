@@ -1,6 +1,7 @@
 import styled from "styled-components";
 
 const RickandMortyCardContainer = styled.article`
+    margin-botton: 10px;
     display: flex;
     align-item: center;
     text-align: center;
@@ -17,9 +18,11 @@ const RickandMortyCardContainer = styled.article`
         line-height: 48px;
     }
     img{
+        border-radius: 20px;
         max-width: 300px;
     }
     span{
+        margin-top: 20px;
         background-color: #419E99;
         padding: 5px 10px;
         border-radius: 5px;

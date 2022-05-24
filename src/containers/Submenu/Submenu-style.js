@@ -11,8 +11,9 @@ const SubmenuContainer = styled.section`
     width: 100%;
     height: 80px;
     a{
+        font-weight: bold;
         color: #FFF;
-        margin: 0 10px;
+        margin: 0 50px;
     }
     a:hover{
         color: yellow;

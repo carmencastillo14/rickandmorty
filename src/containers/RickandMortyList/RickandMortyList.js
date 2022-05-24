@@ -6,6 +6,11 @@ const RickListContainer = styled.ul`
     justify-content: space-between;
     align-items: flex-start;
     flex-wrap: wrap;
+    padding: 40px 0;
+    @media screen and (max-width: 682px){
+        justify-content: center;
+        align-items: center;
+    }
 `;
 
 export default RickListContainer;

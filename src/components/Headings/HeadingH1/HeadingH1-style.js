@@ -7,6 +7,9 @@ const HeadingH1Container = styled.h1`
     line-height: 70px;
     color: #419E99;
     padding: 20px 0 ;
+    span{
+        color: yellow;
+    }
 `;
 
 export default HeadingH1Container;
