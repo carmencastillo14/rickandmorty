@@ -7,8 +7,9 @@ const HeadingH1Container = styled.h1`
     line-height: 70px;
     color: #419E99;
     padding: 20px 0 ;
-    span{
-        color: yellow;
+    @media screen and (max-width:600px){
+        font-size: 50px;
+        line-height: 50px;
     }
 `;
 
