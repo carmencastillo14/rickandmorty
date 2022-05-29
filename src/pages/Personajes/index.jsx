@@ -84,7 +84,6 @@ const  Home = () => {
       setSearchedRick(filteredRick);
     }
   
-  
     
     return (
       <HomeContainer >
@@ -130,7 +129,7 @@ const  Home = () => {
               })
             }
           </RickandMortyList>
-           {/* LOS BOTONES DE PREV Y NEXT  */}
+           {/* LOS BOTONES DE ANTERIOR Y SIGUIENTE  */}
           {
           info.count && <PageNavegation
               prevUrl={info.prev}

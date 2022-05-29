@@ -20,7 +20,7 @@ const MainModalContainer = styled.div`
         background-color: white;
         .tob-bar{
             padding: 5px;
-            text-align: right;
+            text-align: center;
             span{
                 cursor: pointer;
             }

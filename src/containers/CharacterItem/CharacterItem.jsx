@@ -1,9 +1,8 @@
 import React from "react";
 
-//components
-// import SeeMore from "../../components/Text/SeeMore/SeeMore";
+//ESTILO
 
-//styled-components
+
 import CharacterItemContainer from "./CharacterItem-style";
 
 const CharacterItem = ({ name, sheet, image, vertical, handleClick, children }) => {
@@ -11,7 +10,6 @@ const CharacterItem = ({ name, sheet, image, vertical, handleClick, children }) 
         <CharacterItemContainer>
             <div className="textBoxTitle">
                 <strong>{ name }</strong>
-                {/* {(name.length <= 20) ? <strong>{name}</strong> : <marquee behavior="alternate" scrollamount="1">{ name }</marquee>} */}
             </div>
             <div className="card">
                 <div className="verticalText">

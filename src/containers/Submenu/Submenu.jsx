@@ -5,7 +5,6 @@ import SubmenuContainer from './Submenu-style';
 const Submenu = () => {
     return (
         <SubmenuContainer>
-            
             <nav>
                 <Link to="/">Personajes</Link>
                 <Link to="/contacto">Contacto</Link>
