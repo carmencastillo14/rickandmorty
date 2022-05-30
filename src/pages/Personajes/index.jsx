@@ -19,7 +19,7 @@ import RickandMortyList from '../../containers/RickandMortyList/RickandMortyList
 import RickandMorty from '../../components/RickandMortyCard/RickandMorty';
 import MainModal from '../../containers/MainModal/MainModal-style';
 import PageNavegation from "../../containers/PageNavegation/PageNavegation";
-
+import CharacterItemContainer from "../../containers/CharacterItem/CharacterItem";
 
 import { getRickandMortyRequest } from '../../lib/rick-api/request/get-rickandmorty-request';
 
@@ -36,6 +36,7 @@ const  Home = () => {
     const RickService = useRick();
   
     const [rickandMortyList, setRickandMortyList] = useState([]);
+    //LA BARRA DE BUSQUEDA SE LLAMA AQUI
     const [searchedRick, setSearchedRick] = useState([]);
     const [characterList, setCharacterList] = useState([]);
     const [selectedCharacter, setSelectedCharacter] = useState([]);
@@ -74,7 +75,8 @@ const  Home = () => {
       setSelectedRick(RickInfo);
       handleModal(true)
     }
-  
+    
+  // BARRA DE BUSQUEDA
     const handleSearch = () => {
       const searchedValue = searchBar.current.value.toLowerCase();
       const filteredRick = RickandMortyList.filter(Rick => Rick.name.toLowerCase().includes(searchedValue));
@@ -96,7 +98,6 @@ const  Home = () => {
           <HeadingH2 text="Encuentra a tus personajes favoritos de Rick And Morty en esta API." />
         </Hero>
         <Section>
-
           {
             RickService.loading && <span>Estoy descargando la lista</span>
           }
@@ -126,6 +127,8 @@ const  Home = () => {
               })
             }
           </RickandMortyList>
+
+
            {/* LOS BOTONES DE ANTERIOR Y SIGUIENTE  */}
           {
           info.count && <PageNavegation
@@ -142,7 +145,11 @@ const  Home = () => {
             </MainModal> 
           )
         }
-        
+        {
+          modalOpened && (
+            <MainModal handleClick={() => handleModal(false)}></MainModal> 
+          )
+      }
       </HomeContainer>
     );
   }

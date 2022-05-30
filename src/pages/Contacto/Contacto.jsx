@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef, useContext  } from 'react';
+import React, { useState} from 'react';
 
 //Styled-components
 import ContactoContenedor from './Contacto-style';
@@ -10,7 +10,7 @@ import Submenu from '../../containers/Submenu/Submenu'
 import HeadingH1 from '../../components/Headings/HeadingH1/HeadingH1';
 import Paragraph from '../../components/Paragraph/Paragraph';
 import Section from '../../containers/Section/Section';
-import HeadingH2 from '../../components/Headings/HeadingH2/HeadingH2/HeadingH2';
+
 
 
 const Contact = () => {
@@ -29,7 +29,7 @@ const Contact = () => {
             
             <Hero>
               <HeadingH1 
-                text="Contacta conmigo:)"
+                text="Contacta conmigo :)"
                 />
             </Hero>
             <Section>

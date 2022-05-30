@@ -19,9 +19,11 @@ const MainModalContainer = styled.div`
         min-height: 300px;
         background-color: white;
         .tob-bar{
+            background-color: white;
             padding: 5px;
             text-align: center;
             span{
+                color: white;
                 cursor: pointer;
             }
         }
