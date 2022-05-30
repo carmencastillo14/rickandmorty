@@ -1,8 +1,6 @@
 import React from "react";
 
 //ESTILO
-
-
 import CharacterItemContainer from "./CharacterItem-style";
 
 const CharacterItem = ({ name, sheet, image, vertical, handleClick, children }) => {

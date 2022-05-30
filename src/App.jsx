@@ -20,7 +20,7 @@ function App() {
           <Route path="/" element={<Personajes />} />
           <Route path="/Personajes" element={<Personajes />} />
           <Route path="/Personajes/:name" element={<RickDetail />} />
-          <Route path="/contactos" element={<Contacto />} />
+          <Route path="/contacto" element={<Contacto />} />
         </Routes>
       </BrowserRouter>
   );

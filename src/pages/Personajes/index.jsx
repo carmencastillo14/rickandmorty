@@ -70,10 +70,12 @@ const  Home = () => {
 
 
     const handleRick = async (url) => {
-      const Rick = await RickService.getRick(url);
+      const Rick = await RickService.getRickandComponents
+      (url);
       const RickInfo = await Rick.data;
       setSelectedRick(RickInfo);
       handleModal(true)
+      console.log(RickInfo);
     }
     
   // BARRA DE BUSQUEDA
@@ -114,6 +116,8 @@ const  Home = () => {
           </div>
           <RickandMortyList>
             {
+              //AQUI DEBERIA DE LLAMAR A LA BARRA DE BUSQUEDA searchedRick
+              // searchedPokemon.map((pokemon, index) => { DE ESTA MANERA PERO, SI PONGO ESTE CODIGO,
               rickandMortyList.length > 0  && rickandMortyList.map((Rick, index) => {
                 return (
                   <li key={index}>
@@ -141,15 +145,15 @@ const  Home = () => {
         {
           modalOpened && (
             <MainModal handleClick={() => handleModal(false)}>
-              img={selectedCharacter.image}
+              <h1>{selectedRick.name}</h1>
+              <h3> {selectedRick.gender}</h3>
+              <h3> {selectedRick.status}</h3> 
+
+
             </MainModal> 
           )
         }
-        {
-          modalOpened && (
-            <MainModal handleClick={() => handleModal(false)}></MainModal> 
-          )
-      }
+
       </HomeContainer>
     );
   }
