@@ -12,6 +12,7 @@ const PageButtonContainer = styled.span`
     text-align: center;
     text-decoration: none;
     cursor:pointer;
+
 `;
 
 export default PageButtonContainer;

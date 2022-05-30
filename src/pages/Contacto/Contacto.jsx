@@ -43,6 +43,7 @@ const Contact = () => {
                     <input 
                         type="email" 
                         name="email" 
+                        
                         placeholder='Email'
                         onBlur={(e) => handleFormValue(e) }
                         />
