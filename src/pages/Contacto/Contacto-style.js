@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-const ContactContainer = styled.div`
+const ContactoContenedor = styled.div`
     .hero-wrapper{
         text-align: center;
         color: white;
@@ -19,4 +19,4 @@ const ContactContainer = styled.div`
     }
 `;
 
-export default ContactContainer;
+export default ContactoContenedor;

@@ -68,9 +68,6 @@ const  Home = () => {
     };
 
 
-
-
-
     const handleRick = async (url) => {
       const Rick = await RickService.getRick(url);
       const RickInfo = await Rick.data;
