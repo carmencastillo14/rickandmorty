@@ -14,6 +14,8 @@ const RickandMortyCardContainer = styled.article`
     border: solid 2px  #419E99;
     border-radius: 15px;
     h3{
+        font-weight: bold;
+
         font-size: 20px;
         line-height: 48px;
     }
@@ -22,12 +24,22 @@ const RickandMortyCardContainer = styled.article`
         max-width: 300px;
     }
     span{
+        font-weight: bold;
+        border: 2px solid #419E99;
         margin-top: 20px;
         background-color: #419E99;
         padding: 5px 10px;
         border-radius: 5px;
         cursor: pointer;
         color: white;
+        transition: all .4s;
+        &:hover{
+            box-shadow: none;
+            font-weight: bold;
+            border: 2px solid #419E99;
+            background-color:#FFF;
+            color: #419E99;
+        }
     }
     
 `;
