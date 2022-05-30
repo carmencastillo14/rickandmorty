@@ -6,7 +6,7 @@ const RickCard = ({name, handleClick, image}) => {
         <RickandMortyCardContainer>
             <h3>{name}</h3>
             <img src={ image } alt="" />
-            <span onClick={() => handleClick()} >Ver habilidades</span>
+            <span onClick={() => handleClick()} >Ver más</span>
         </RickandMortyCardContainer>
     );
 };

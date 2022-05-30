@@ -15,9 +15,10 @@ const SubmenuContainer = styled.section`
         color: #FFF;
         margin: 0 50px;
     }
-    a:hover{
+    a:hover, a:link{
         color: yellow;
     }
+    
 `;
 
 export default SubmenuContainer;
