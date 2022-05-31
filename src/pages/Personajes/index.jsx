@@ -145,9 +145,16 @@ const  Home = () => {
         {
           modalOpened && (
             <MainModal handleClick={() => handleModal(false)}>
+              <div>
               <h1>{selectedRick.name}</h1>
-              <h3> {selectedRick.gender}</h3>
-              <h3> {selectedRick.status}</h3> 
+              <img src={selectedRick.image} alt="" />
+              <h3> Gender: {selectedRick.gender}</h3>
+              <h3>Status: {selectedRick.status}</h3> 
+              <h3>Status: {selectedRick.status}</h3> 
+              <h3>Origin: {selectedRick.origin[`name`]}</h3> 
+              <h3>Location: {selectedRick.location[`name`]}</h3> 
+              </div>
+
 
 
             </MainModal> 

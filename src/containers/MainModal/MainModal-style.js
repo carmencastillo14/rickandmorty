@@ -13,6 +13,28 @@ const MainModalContainer = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
+    display: flex;
+    flex-direction: column;
+    div{
+        text-align: center;
+        border: 2px solid white;
+        border-radius: 10px;
+        padding: 20px 30px;
+        background-color: #419E99;
+    }
+    h1{
+        line-height: 80px;  
+        font-size: 45px;
+        color: white;
+    }
+    img{
+        border-radius: 20px;
+    }
+    h3{
+        line-height: 35px;  
+        font-size: 25px;
+        color: white;
+    }
     .modal-wrapper{
         width: 100%;
         max-width: 900px;

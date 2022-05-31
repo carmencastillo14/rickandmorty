@@ -6,12 +6,15 @@ const ContactoContenedor = styled.div`
         color: white;
     }   
     form{
-        margin-top: -17%;
+        margin-top: -200px;
         display:flex;
         justify-content: center;
         flex-direction:column;
         align-items:center;
         width:100%;
+        @media screen and (max-width: 530px){
+            margin-top: -170px;
+        }
         span{
             margin-top: 5px;
             font-weight:bold;
