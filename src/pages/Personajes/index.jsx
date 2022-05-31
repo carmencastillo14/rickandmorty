@@ -18,7 +18,7 @@ import RickandMortyList from '../../containers/RickandMortyList/RickandMortyList
 import RickandMorty from '../../components/RickandMortyCard/RickandMorty';
 import MainModal from '../../containers/MainModal/MainModal';
 import PageNavegation from "../../containers/PageNavegation/PageNavegation";
-import CharacterItemContainer from "../../containers/CharacterItem/CharacterItem";
+
 
 import { getRickandMortyRequest } from '../../lib/rick-api/request/get-rickandmorty-request';
 
@@ -37,10 +37,9 @@ const  Home = () => {
     const [rickandMortyList, setRickandMortyList] = useState([]);
     //LA BARRA DE BUSQUEDA SE LLAMA AQUI
     const [searchedRick, setSearchedRick] = useState([]);
-    const [characterList, setCharacterList] = useState([]);
-    const [selectedCharacter, setSelectedCharacter] = useState([]);
+
+
     const [info, setInfo] = useState({})
-    
     const [selectedRick, setSelectedRick] = useState({});
   
     const searchBar = useRef(null);
