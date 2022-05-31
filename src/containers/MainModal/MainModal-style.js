@@ -13,7 +13,6 @@ const MainModalContainer = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
-    display: flex;
     flex-direction: column;
     div{
         text-align: center;
@@ -36,6 +35,7 @@ const MainModalContainer = styled.div`
         color: white;
     }
     .modal-wrapper{
+        position: fixed;    
         width: 100%;
         max-width: 900px;
         min-height: 300px;

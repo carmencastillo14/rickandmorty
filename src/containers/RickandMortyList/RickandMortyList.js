@@ -11,6 +11,7 @@ const RickListContainer = styled.ul`
         justify-content: center;
         align-items: center;
     }
+
 `;
 
 export default RickListContainer;

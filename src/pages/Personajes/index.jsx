@@ -12,7 +12,6 @@ import Header from '../../containers/header/header';
 import Hero from '../../containers/hero/hero';
 import Submenu from '../../containers/Submenu/Submenu'
 import HeadingH1 from '../../components/Headings/HeadingH1/HeadingH1';
-import Paragraph from '../../components/Paragraph/Paragraph';
 import Section from '../../containers/Section/Section';
 import HeadingH2 from '../../components/Headings/HeadingH2/HeadingH2/HeadingH2';
 import RickandMortyList from '../../containers/RickandMortyList/RickandMortyList';
@@ -53,6 +52,7 @@ const  Home = () => {
         const Ricks = await RickService.getRick();
         const { results, info } = await Ricks.data;
         setRickandMortyList(results);
+        setSearchedRick(results);
         setInfo(info)
 
       }
@@ -117,9 +117,10 @@ const  Home = () => {
           <RickandMortyList>
             {
               //AQUI DEBERIA DE LLAMAR A LA BARRA DE BUSQUEDA searchedRick
-              // searchedPokemon.map((pokemon, index) => { DE ESTA MANERA PERO, SI PONGO ESTE CODIGO,
-              rickandMortyList.length > 0  && rickandMortyList.map((Rick, index) => {
-                return (
+              // searchedRick.map((Rick, index) => { DE ESTA MANERA PERO, SI PONGO ESTE CODIGO,
+              // rickandMortyList.length > 0  && rickandMortyList.map((Rick, index) => {
+                searchedRick.map((Rick, index) => {
+                return (  
                   <li key={index}>
                     <RickandMorty 
                       name={Rick.name}
