@@ -29,10 +29,6 @@ const CharacterItem = ({ name, sheet, image, vertical, handleClick, children }) 
                     <div className="textBoxBody">
                         <p>{ sheet }</p>
                     </div>
-                    {/* <SeeMore 
-                        buttonText={buttonText}
-                        onClick={() => handleClick()} 
-                    />             */}
                     <div 
                     className="buttonSeeMore" 
                     onClick={() => handleClick()}

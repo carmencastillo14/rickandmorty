@@ -17,7 +17,7 @@ import Section from '../../containers/Section/Section';
 import HeadingH2 from '../../components/Headings/HeadingH2/HeadingH2/HeadingH2';
 import RickandMortyList from '../../containers/RickandMortyList/RickandMortyList';
 import RickandMorty from '../../components/RickandMortyCard/RickandMorty';
-import MainModal from '../../containers/MainModal/MainModal-style';
+import MainModal from '../../containers/MainModal/MainModal';
 import PageNavegation from "../../containers/PageNavegation/PageNavegation";
 import CharacterItemContainer from "../../containers/CharacterItem/CharacterItem";
 

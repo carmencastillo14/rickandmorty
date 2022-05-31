@@ -6,13 +6,12 @@ import MainModalContainer from "./MainModal-style";
 const MainModal = ({img, children, handleClick}) => {
     return (
         <MainModalContainer>
-            <img src="{ img }" alt="" />
             <div className="modal-wrapper">
                 <div className="tob-bar">
-                    <p>Información</p>
                     <span onClick={() => handleClick()}>X</span>
                 </div>
                 <div className="informacion">
+                    <img src={img} alt="" />
                     {children}
                 </div>
             </div>

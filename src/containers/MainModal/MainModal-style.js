@@ -50,6 +50,12 @@ const MainModalContainer = styled.div`
             }
         }
     }
+    span{
+        display: flex;
+        text-align: right !important;
+        font-size: 2rem;
+        color: #419E99 !important;   
+    }
 `;
 
 export default MainModalContainer;
