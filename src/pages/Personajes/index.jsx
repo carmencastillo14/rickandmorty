@@ -119,7 +119,7 @@ const  Home = () => {
               //AQUI DEBERIA DE LLAMAR A LA BARRA DE BUSQUEDA searchedRick
               // searchedRick.map((Rick, index) => { DE ESTA MANERA PERO, SI PONGO ESTE CODIGO,
               // rickandMortyList.length > 0  && rickandMortyList.map((Rick, index) => {
-                searchedRick.map((Rick, index) => {
+                rickandMortyList.length > 0  && rickandMortyList.map((Rick, index) =>  {
                 return (  
                   <li key={index}>
                     <RickandMorty 
